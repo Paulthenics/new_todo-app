@@ -1,0 +1,33 @@
+C PROGRAMMING
+This is test to print out all lines from the txt file
+
+strlen() -> calculates the length of a string
+strcat() -> links two strings together
+
+An array is a collection of elements with the same data type
+
+Two file handling modes:
+    a) w -> write mode
+    a) r -> read mode
+
+Three Fundamental Data Types:
+1. int -> 38
+2. char -> j
+3. float -> 0.0000
+
+Operators in C:
+    a) + 
+    b) - 
+    c) /
+    d) *
+    e) %
+
+'for loop' Explanation
+
+A control flow statement used to repeat a block of code a fixed number of times or until a condition is met!!!
+
+for (initialization; condition; increment/decrement) {
+    // CODE!
+}
+
+STRUCTURE -> a user-defined data type that allows you to group multiple related variables of different types into a single unit

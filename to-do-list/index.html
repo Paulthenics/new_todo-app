@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>To-Do List | Paulthenix</title>
+    <title>To-Do List</title>
 </head>
 <body>
     <div class="container">
         <div class="big-card">
-            <p>Date:  Time:</p>
-            <input type="text" placeholder="Add a New Task">
-            <button>Add</button>
-            <li class="ul"></li>
-            <li class="ul"></li>
-            <li class="ul"></li>
-            <li class="ul"></li>
-            <li class="ul"></li>
+            <p id="date"></p>
+            <p id="time"></p>
+            <div id="second-row">
+                <input
+                    type="text"
+                    placeholder="Add a New Task" id="input-task"
+                >
+                <button id="add-btn">ADD TASK</button>
+            </div>
+            <ul id="list-container">
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+                <li>Task 4</li>
+            </ul>
         </div>
         <div class="small-cards">
             <div class="small-card">

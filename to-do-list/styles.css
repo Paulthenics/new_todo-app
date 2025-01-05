@@ -1,11 +1,42 @@
 body {
-    background-image: url(daniel-vogel-I7E6u9I4R3k-unsplash\ -\ Copy.jpg);
+    background-image: url(images/main-background.jpg);
     background-size: cover;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: rgb(235, 235, 235);
+    text-shadow: 0 0 3px black;
+    font-family: 'Raleway', sans-serif;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+::selection {
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+    font-size: 19px;
+    cursor: default;
+}
+
+#date {
+    margin-right: 12px;
+}
+
+h1 {
+    text-align: center;
+    border-top: 1px solid rgb(235, 235, 235);
+    padding-top: 20px;
 }
 
 .container {
@@ -50,9 +81,21 @@ body {
     border: none;
     background: transparent;
     flex: 1;
+    color: rgb(235, 235, 235);
+    font-family: inherit;
+    text-shadow: 0 0 3px black;
+    font-size: 17px;
+    font-weight: 500;
 }
 
-#second-row {
+#input-task::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 2px black;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.second-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,21 +103,137 @@ body {
     border-radius: 30px;
 }
 
-#add-btn {
+.add-btn {
     outline: none;
     border: none;
     padding: 15px 24px 15px 24px;
     border-radius: 30px;
+    font-family: inherit;
+    background-color: rgb(231, 231, 231);
+    font-weight: bold;
+    font-size: 16px;
+    transition: box-shadow 200ms ease-in, background-color 200ms ease-in;
 }
 
-button:hover {
+.add-btn:hover {
+    box-shadow: 0 0 4px rgb(202, 202, 202);
     cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+
+.add-btn:active {
+    box-shadow: 0 0 4px rgb(202, 202, 202);
+    background-color: rgb(207, 207, 207);
+    transition: box-shadow 200ms, background-color 200ms;
 }
 
 ul li {
     list-style: none;
     font-size: 20px;
     padding: 15px;
+    cursor: pointer;
+    position: relative;
     user-select: none;
     -webkit-user-select: none;
+}
+
+ul li::before {
+    content: '';
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    left: -22px;
+    bottom: 14px;
+}
+
+ul li.checked {
+    color: rgb(183, 183, 183);
+    text-decoration: line-through;
+}
+
+ul li#no-tasks {
+    font-size: 17px;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -20px;
+    bottom: 17px;
+}
+
+.small-cards {
+    text-align: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.quote-container p::before {
+    content: "- ";
+}
+
+.quote-container p {
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.quote-container h3 {
+    line-height: 24px;
+}
+
+.quote-btn {
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-family: inherit;
+    background-color: rgb(231, 231, 231);
+    font-weight: bold;
+    transition: box-shadow 200ms ease-in, background-color 200ms ease-in;
+}
+
+.quote-btn:hover {
+    box-shadow: 0 0 4px rgb(202, 202, 202);
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+
+.quote-btn:active {
+    box-shadow: 0 0 4px rgb(202, 202, 202);
+    background-color: rgb(207, 207, 207);
+    transition: box-shadow 200ms, background-color 200ms;
+}
+
+ul li delete {
+    position: absolute;
+    background-image: url(images/delete2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0%;
+    height: 20px;
+    width: 20px;
+    right: 26px;
+    top: 17px;
+}
+
+ul li delete:hover {
+    cursor: pointer;
 }
